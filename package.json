@@ -1,0 +1,19 @@
+{
+  "name": "taller2-grupo4",
+  "version": "1.0.0",
+  "description": "Taller 2 de grupo 4 Servicios Web",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
