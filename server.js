@@ -22,17 +22,18 @@ db.connect((err) => {
 
 // Ruta que hace un query a la base de datos y devuelve los resultados en formato JSON
 app.get('/', (req, res) => {
-    db.query('SELECT * FROM your_table_name', (err, results) => {
+    db.query('CALL GetEmployees()', (err, results) => {
         if (err) {
-            console.error('Error executing query:', err);
-            res.status(500).json({ error: 'Database query failed' });
+            console.error('Error ejecutando el query:', err);
+            res.status(500).json({ error: 'No se pudo conseguir Empleados' });
             return;
         }
-        res.json(results);
+        res.json(results[0]); // results[0] almacena el resultado del query.
     });
 });
 
-// Start the server on port 3000
+
+// Servidor en puerto 3004
 app.listen(3004, () => {
     console.log('Server is running on http:localhost:3004/');
 });
