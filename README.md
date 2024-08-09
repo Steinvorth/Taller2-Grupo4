@@ -27,3 +27,5 @@ CREATE PROCEDURE GetEmployees()
 BEGIN
     SELECT * FROM Employees;
 END;
+
+Para correr el projecto : node run devStart
